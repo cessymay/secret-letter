@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Little Secret 🖤</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="page">
+
+    <header class="intro">
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <h1>For My Love 🥀</h1>
+        <p class="subtitle">Some things are only meant for your heart.</p>
+    </header>
+
+
+    <!-- SCREEN 1: PASSCODE -->
+    <section id="passcodeScreen" class="screen">
+
+        <div class="lock-icon">🔒</div>
+
+        <h2>A Secret Just for You</h2>
+
+        <p class="description">
+            Enter our secret 6-digit passcode to unlock your letter.
+        </p>
+
+        <div class="pin-display" id="pinDisplay" aria-label="Six-digit passcode">
+            <span class="pin-dot"></span>
+            <span class="pin-dot"></span>
+            <span class="pin-dot"></span>
+            <span class="pin-dot"></span>
+            <span class="pin-dot"></span>
+            <span class="pin-dot"></span>
+        </div>
+
+        <p id="pinMessage" class="pin-message" aria-live="polite">
+            Enter the secret numbers 🖤
+        </p>
+
+        <div class="keypad">
+
+            <button class="key" data-number="1">1</button>
+            <button class="key" data-number="2">2</button>
+            <button class="key" data-number="3">3</button>
+
+            <button class="key" data-number="4">4</button>
+            <button class="key" data-number="5">5</button>
+            <button class="key" data-number="6">6</button>
+
+            <button class="key" data-number="7">7</button>
+            <button class="key" data-number="8">8</button>
+            <button class="key" data-number="9">9</button>
+
+            <button class="key key-action" id="clearPin">C</button>
+            <button class="key" data-number="0">0</button>
+            <button class="key key-action" id="deletePin">⌫</button>
+
+        </div>
+
+        <button id="unlockButton" class="primary-button">
+            Unlock My Letter ♡
+        </button>
+
+        <p class="private-note">A little secret between us.</p>
+
+    </section>
+
+
+    <!-- SCREEN 2: ENVELOPE -->
+    <section id="envelopeScreen" class="screen hidden">
+
+        <p class="eyebrow">UNLOCKED WITH LOVE</p>
+
+        <div class="envelope-scene">
+
+            <button id="openEnvelope" class="envelope-button"
+                    aria-label="Open your secret letter">
+
+                <div class="envelope" id="envelope">
+
+                    <div class="envelope-back"></div>
+
+                    <div class="letter-paper">
+                        <span class="paper-heart">♥</span>
+                        <p>To my favorite person,</p>
+                        <span>With love, always.</span>
+                    </div>
+
+                    <div class="envelope-front"></div>
+                    <div class="envelope-flap"></div>
+
+                    <div class="wax-seal">♥</div>
+
+                </div>
+
+            </button>
+
+        </div>
+
+        <h2>You Have a Secret Letter</h2>
+
+        <p class="description">
+            Tap the envelope, love. There's something waiting for you.
+        </p>
+
+        <button id="continueButton" class="primary-button">
+            Open My Mail 💌
+        </button>
+
+    </section>
+
+
+    <!-- SCREEN 3: THREE CHOICES -->
+    <section id="choicesScreen" class="screen hidden">
+
+        <div class="section-heading">
+            <p class="eyebrow">CHOOSE A PIECE OF MY HEART</p>
+
+            <h2>Which letter do you want to open?</h2>
+
+            <p>Take your time, love. Read whatever your heart needs.</p>
+        </div>
+
+        <div class="choice-list">
+
+            <button class="choice-card" data-message="sorry">
+                <span class="choice-icon">🥀</span>
+
+                <span class="choice-info">
+                    <strong>Sorry Message</strong>
+                    <small>For the moments I wish I could make better.</small>
+                </span>
+
+                <span class="choice-arrow">♡</span>
+            </button>
+
+
+            <button class="choice-card" data-message="tampo">
+                <span class="choice-icon">🖤</span>
+
+                <span class="choice-info">
+                    <strong>Mga Tampo Ko Sa'yo :&lt;</strong>
+                    <small>Things I sometimes find hard to say.</small>
+                </span>
+
+                <span class="choice-arrow">♡</span>
+            </button>
+
+
+            <button class="choice-card" data-message="random">
+                <span class="choice-icon">💌</span>
+
+                <span class="choice-info">
+                    <strong>Random Messages</strong>
+                    <small>Little reminders that you are loved.</small>
+                </span>
+
+                <span class="choice-arrow">♡</span>
+            </button>
+
+        </div>
+
+        <button class="text-button" id="backToEnvelope">
+            ← Back to the envelope
+        </button>
+
+    </section>
+
+
+    <!-- SCREEN 4: LETTER AND REPLY -->
+    <section id="letterScreen" class="screen hidden">
+
+        <article class="letter-card">
+
+            <div class="letter-card-top">
+                <span>✦ A LETTER FROM MY HEART ✦</span>
+                <span>♥</span>
+            </div>
+
+            <div class="letter-card-body">
+
+                <p class="letter-to">To my love,</p>
+
+                <h2 id="messageTitle">My Love 🖤</h2>
+
+                <div class="divider"><span>♡</span></div>
+
+                <p id="letterText" class="letter-text"></p>
+
+                <div class="letter-signature">
+                    <p>With all my love,</p>
+                    <span>Yours, always. 🥀</span>
+                </div>
+
+            </div>
+
+        </article>
+
+        <div class="reply-box">
+
+            <h3>💌 A Little Space for You</h3>
+
+            <p>
+                I want to hear what's in your heart, too.
+                Leave me a message, love.
+            </p>
+
+            <label for="replyText">Your message for me</label>
+
+            <textarea
+                id="replyText"
+                rows="5"
+                maxlength="2000"
+                placeholder="Tell me what you're feeling, love...">
+            </textarea>
+
+            <p id="replyStatus" class="reply-status" aria-live="polite"></p>
+
+            <button id="sendReply" class="primary-button">
+                Send Your Reply 💌
+            </button>
+
+            <p class="reply-note">
+                Your reply will open your chosen messaging app or email.
+            </p>
+
+        </div>
+
+        <button id="backToChoices" class="text-button">
+            ← Back to the three letters
+        </button>
+
+    </section>
+
+
+    <footer>
+        <span>♡</span> Made with love, especially for you. <span>♡</span>
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
