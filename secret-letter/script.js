@@ -75,7 +75,7 @@ I'm sorry, and Iloveyoumuch. 🖤`
 
     tampo: {
         title: "unsaid thoughts:< 🖤",
-        text: `Love, may mga times na nagtatampo ako sa'yo
+        text: `babi, may mga times na nagtatampo ako sa'yo
 pero hindi ko alam kung paano sasabihin. :<
 
 Minsan gusto ko lang na mapansin mo kapag
